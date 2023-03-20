@@ -81,7 +81,7 @@ const ChatBox = () => {
                 },
             })
             console.log(messages,'----------------------------messages');
-            setMessages([...messages, res.data]);
+            setMessages([...messages1, res.data]);
             setNewMessage('');
         } catch (error) {
             console.log(error)
@@ -155,7 +155,7 @@ const ChatBox = () => {
 
     useEffect(() => {
         scrollRef.current?.scrollIntoView({behavior:"smooth"})
-    },[messages])
+    },[messages1])
 
 
     return (
