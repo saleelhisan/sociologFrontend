@@ -42,7 +42,12 @@ const actions = [
 const ChatBox = () => {
 
     const [openImageUpload, setImageUpload] = useState(false);
+    let messages1 = [] 
+    if(messages){
+        messages1 = messages
+    }
     const [messages, setMessages] = useState(null);
+
     const [newMessage, setNewMessage] = useState('');
     const [arrivalMessage, setArrivalMessage] = useState(null);
     const { id } = useParams();
@@ -187,8 +192,8 @@ const ChatBox = () => {
                 }}>
                 
                     <Box>
-                        {messages &&
-                            messages.map((msg,index) => {
+                        {messages1 &&
+                            messages1?.map((msg,index) => {
                                 return (
                                     <Box ref={scrollRef} key={index}>
                                         <Message msg={msg} />
