@@ -28,7 +28,7 @@ import TimeAgo from 'timeago.js';
 
 
 
-const socket = io.connect("ws://localhost:6001");
+const socket = io.connect("wss://saleelhisan.online");
 
 const actions = [
     { icon: <FileCopyIcon />, name: 'Copy' },
